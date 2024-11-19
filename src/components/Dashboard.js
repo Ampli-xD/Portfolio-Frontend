@@ -200,25 +200,25 @@ const Dashboard = () => {
                       </div>
                     </div>
                     <div className="social-links">
-                      <a href="https://github.com" target="_blank" rel="noopener noreferrer" title="GitHub">
+                      <a href="https://github.com/Ampli-xD" target="_blank" rel="noopener noreferrer" title="GitHub">
                         <i className="fab fa-github"></i>
                       </a>
-                      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                      <a href="https://www.linkedin.com/in/dishant29" target="_blank" rel="noopener noreferrer" title="LinkedIn">
                         <i className="fab fa-linkedin"></i>
                       </a>
-                      <a href="mailto:your.email@example.com" title="Email">
+                      <a href="mailto:dishantkapoor29@gmail.com" title="Email">
                         <i className="fas fa-envelope"></i>
                       </a>
-                      <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" title="Resume">
+                      <a href="https://drive.google.com/file/d/1N77p-e6LKDtJWIYKoOTeqAtnV-Zmpl5B/view?usp=sharing" target="_blank" rel="noopener noreferrer" title="Resume">
                         <i className="fas fa-file-alt"></i>
                       </a>
-                      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram">
+                      <a href="https://www.instagram.com/dishant.pyw" target="_blank" rel="noopener noreferrer" title="Instagram">
                         <i className="fab fa-instagram"></i>
                       </a>
-                      <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" title="WhatsApp">
+                      <a href="https://api.whatsapp.com/send?phone=918130332537" target="_blank" rel="noopener noreferrer" title="WhatsApp">
                         <i className="fab fa-whatsapp"></i>
                       </a>
-                      <a href="https://linktr.ee" target="_blank" rel="noopener noreferrer" title="Linktree">
+                      <a href="https://linktr.ee/dishant.pyw" target="_blank" rel="noopener noreferrer" title="Linktree">
                         <i className="fas fa-link"></i>
                       </a>
                     </div>

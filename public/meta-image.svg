@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background with gradient -->
+    <rect width="1200" height="630" fill="url(#gradient)"/>
+    
+
+    <!-- Content container -->
+    <g transform="translate(100, 100)">
+        <!-- Name -->
+        <text x="0" y="0" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="white">
+            Dishant Kapoor
+        </text>
+        
+
+        <!-- Specializations -->
+        <text x="0" y="160" font-family="Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.8)">
+            Python Backend Development | AI Engineering
+        </text>
+        <text x="0" y="200" font-family="Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.8)">
+            Vector Databases | Large Language Models
+        </text>
+        
+        <!-- Contact -->
+        <text x="0" y="280" font-family="Arial, sans-serif" font-size="20" fill="rgba(255,255,255,0.7)">
+            dishantkapoor29@gmail.com
+        </text>
+        
+        <!-- Website -->
+        <text x="0" y="320" font-family="Arial, sans-serif" font-size="20" fill="rgba(255,255,255,0.7)">
+            dishant.vercel.app
+        </text>
+    </g>
+    
+    <!-- Decorative circles -->
+    <circle cx="1000" cy="150" r="100" fill="rgba(255,255,255,0.1)"/>
+    <circle cx="950" cy="200" r="50" fill="rgba(255,255,255,0.05)"/>
+    
+    <!-- Gradient definition -->
+    <defs>
+        <linearGradient id="gradient" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#000000"/>
+            <stop offset="50%" stop-color="#e7a143"/>
+            <stop offset="100%" stop-color="#c92f2e"/>
+        </linearGradient>
+    </defs>
+</svg>
