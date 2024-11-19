@@ -124,7 +124,19 @@ const Dashboard = () => {
                       <div className="flip-card">
                         <div className="flip-card-inner">
                           <div className="flip-card-front">
-                            <img src="/photo.png" alt="Dishant Kapoor" className="profile-image" />
+                            <img 
+                              src="/Photo.png"
+                              alt="Dishant Kapoor"
+                              className="profile-image"
+                              loading="eager"
+                              style={{
+                                width: '300px',
+                                height: '300px',
+                                maxWidth: '100%',
+                                maxHeight: '100%',
+                                objectFit: 'cover'
+                              }}
+                            />
                           </div>
                           <div className="flip-card-back">
                             <div className="back-content">
