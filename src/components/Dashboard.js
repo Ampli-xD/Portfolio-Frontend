@@ -362,7 +362,7 @@ const Dashboard = () => {
                 <div className="education-highlights">
                   <span className="highlight-tag">Physics</span>
                   <span className="highlight-tag">Chemistry</span>
-                  <span className="highlight-tag">Mathematics</span>
+                  <span className="highlight-tag">Maths</span>
                   <span className="highlight-tag">Computer Science</span>
                 </div>
               </div>
@@ -370,18 +370,17 @@ const Dashboard = () => {
               <div className="education-panel">
                 <div className="education-header">
                   <div className="education-info">
-                    <h3 className="institution-name">Bharati Vidyapeeth's College of Engineering</h3>
+                    <h3 className="institution-name">Bharati Vidyapeeth's College of Engineering, GGSIPU, New Delhi</h3>
                     <div className="degree-name">B.Tech Computer Science | GPA: 8.1</div>
                     <div className="education-duration">2022 - 2026 (Expected)</div>
                   </div>
-                  <div className="education-location">GGSIPU, New Delhi</div>
                 </div>
                 <div className="education-details">
                   Specializing in full-stack development and system design while maintaining strong academic performance.
                   Active participation in technical clubs and coding competitions.
                 </div>
                 <div className="education-highlights">
-                  <span className="highlight-tag">Development</span>
+                  {/* <span className="highlight-tag">Development</span> */}
                   <span className="highlight-tag">System Design</span>
                   <span className="highlight-tag">Data Structures</span>
                   <span className="highlight-tag">Algorithms</span>
@@ -395,7 +394,6 @@ const Dashboard = () => {
                     <div className="degree-name">Professional Diploma in Photography</div>
                     <div className="education-duration">2022 - 2024 (Expected)</div>
                   </div>
-                  <div className="education-location">Noida</div>
                 </div>
                 <div className="education-details">
                   Mastering digital photography and post-processing techniques. 
