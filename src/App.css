@@ -1,5 +1,55 @@
+:root {
+  /* Dark Contrast Colors */
+  --color-bg: #000000;
+  --color-card-bg: #1A1A1A;
+  
+  --color-orange-pastel: #FFAB91;
+  --color-blue-pastel: #A7C7E7;
+  --color-green-pastel: #A3D9B1;
+  
+  --color-text: #E9ECEF;
+  --color-text-light: #A6A6A6;
+
+  /* Typography */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Space Grotesk', sans-serif;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 10px rgba(255, 171, 145, 0.1);
+  --shadow-md: 0 4px 20px rgba(255, 171, 145, 0.15);
+  --shadow-lg: 0 8px 30px rgba(255, 171, 145, 0.2);
+  --shadow-neon: 0 0 20px rgba(255, 171, 145, 0.3);
+
+  /* Border Radius */
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 30px;
+  --radius-xl: 40px;
+
+  /* Transitions */
+  --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
 .App {
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .App-logo {
