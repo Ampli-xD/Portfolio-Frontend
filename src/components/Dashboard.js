@@ -83,23 +83,75 @@ const skillsData = [
 
 const Dashboard = () => {
   const [isMessagesOpen, setIsMessagesOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
+
+  const handleTouchStart = (e) => {
+    setTouchStart(e.touches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEnd(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      setIsMobileMenuOpen(false);
+    } else if (isRightSwipe) {
+      setIsMobileMenuOpen(true);
+    }
+
+    setTouchStart(null);
+    setTouchEnd(null);
+  };
 
   const toggleMessages = () => {
     setIsMessagesOpen(!isMessagesOpen);
   };
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
-    <div className="dashboard-container">
-      {/* Left Panel - Logo */}
-      <div className="panel panel-left">
-        <div className="logo-container" onClick={toggleMessages}>
-          <i className="fas fa-brain"></i>
-        </div>
-        <nav className="nav-menu">
+    <div 
+      className={`dashboard-container ${isMobileMenuOpen ? 'menu-open' : ''}`}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
+      {/* Mobile Menu Toggle */}
+      <button className="mobile-menu-toggle" onClick={toggleMobileMenu} aria-label="Toggle menu">
+        <i className={`fas ${isMobileMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
+      </button>
+
+      {/* Navigation Panel */}
+      <div className={`panel panel-left ${isMobileMenuOpen ? 'open' : ''}`}>
+        <nav className="nav-menu" aria-label="Main navigation">
           <ul>
-            <li><i className="fas fa-home"></i></li>
-            <li><i className="fas fa-project-diagram"></i></li>
-            <li><i className="fas fa-user"></i></li>
+            <li>
+              <i className="fas fa-home" aria-label="Home"></i>
+              <span className="nav-label">Home</span>
+            </li>
+            <li>
+              <i className="fas fa-project-diagram" aria-label="Projects"></i>
+              <span className="nav-label">Projects</span>
+            </li>
+            <li>
+              <i className="fas fa-user" aria-label="About"></i>
+              <span className="nav-label">About</span>
+            </li>
+            <li onClick={toggleMessages}>
+              <i className="fas fa-robot" aria-label="Chat"></i>
+              <span className="nav-label">Chat</span>
+            </li>
           </ul>
         </nav>
       </div>
@@ -425,7 +477,11 @@ const Dashboard = () => {
 
       {/* Messages Overlay */}
       {isMessagesOpen && (
-        <div className="messages-overlay">
+        <div className="messages-overlay" onClick={(e) => {
+          if (e.target.className === 'messages-overlay') {
+            toggleMessages();
+          }
+        }}>
           <div className="messages-content">
             <div className="messages-header">
               <div className="header-content">
@@ -441,8 +497,18 @@ const Dashboard = () => {
                 {/* AI chat messages will go here */}
               </div>
               <div className="messages-input">
-                <input type="text" placeholder="Ask anything about Dishant..." />
-                <button><i className="fas fa-paper-plane"></i></button>
+                <input 
+                  type="text" 
+                  placeholder="Ask anything about Dishant..." 
+                  onKeyPress={(e) => {
+                    if (e.key === 'Enter') {
+                      // Handle message send
+                    }
+                  }}
+                />
+                <button aria-label="Send message">
+                  <i className="fas fa-paper-plane"></i>
+                </button>
               </div>
             </div>
           </div>
